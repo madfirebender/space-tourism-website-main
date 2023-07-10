@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link href="technology.css" rel="stylesheet">
+    <title>Frontend Mentor | Space tourism website | Technology</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="./assets/shared/logo.svg">
+        </div>
+        <hr>
+        <ul>
+            <li>
+                <a href="index.html"><span>00</span>HOME</a>
+            </li>
+            <li>
+                <a href="destination.html"><span>01</span>DESTINATION</a>
+            </li>
+            <li>
+                <a href="crew.html"><span>02</span>CREW</a>
+            </li>
+            <li>
+                <a href="technology.html"><span>03</span>TECHNOLOGY</a>
+            </li>
+        </ul>
+        <img class="hamburger" src="./assets/shared/icon-hamburger.svg"> 
+        <img class="close" src="./assets/shared/icon-close.svg">
+    </div>
+
+    <div class="main-wrapper">
+        <div class="slider-wrapper">
+            <div class="content" id="launch">
+                <p class="main-title"><span>03</span> Space launch 101</p>
+                <div class="flexbox">
+                    <div class="links">
+                        <form action="#launch">
+                            <button class="button"><p>1</p></button>
+                        </form>
+                        <form action="#spaceport">
+                            <button class="button"><p>2</p></button>
+                        </form>
+                        <form action="#capsule">
+                            <button class="button"><p>3</p></button>
+                        </form>
+                    </div>
+                    <div class="text">
+                        <div class="head">
+                            <p class="sub-head">THE TERMINOLOGY . . .</p>
+                            <p class="main-head">Launch vehicle</p>
+                        </div>
+                        <p class="paragraph">A launch vehicle or carrier rocket is a rocket-propelled 
+                            vehicle used to carry a payload from Earth's surface to space, usually to 
+                            Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. 
+                            Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad! 
+                        </p>                  
+                    </div>
+                    <picture>
+                        <source 
+                            srcset="./assets/technology/image-launch-vehicle-portrait.jpg"
+                            media="(min-width: 800px)">
+                        <img src="./assets/technology/image-launch-vehicle-landscape.jpg">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="content" id="spaceport">
+                <p class="main-title"><span>03</span> Space launch 101</p>
+                <div class="flexbox">
+                    <div class="links">
+                        <form action="#launch">
+                            <button class="button"><p>1</p></button>
+                        </form>
+                        <form action="#spaceport">
+                            <button class="button"><p>2</p></button>
+                        </form>
+                        <form action="#capsule">
+                            <button class="button"><p>3</p></button>
+                        </form>
+                    </div>
+                    <div class="text">
+                        <div class="head">
+                            <p class="sub-head">THE TERMINOLOGY . . .</p>
+                            <p class="main-head">Spaceport</p>
+                        </div>
+                        <p class="paragraph">
+                            A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+                            by analogy to the seaport for ships or airport for aircraft. Based in the famous 
+                            Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s 
+                            rotation for launch.
+                        </p>
+                    </div>
+                    <picture>
+                        <source 
+                            srcset="./assets/technology/image-spaceport-portrait.jpg"
+                            media="(min-width: 800px)">
+                        <img src="./assets/technology/image-spaceport-landscape.jpg">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="content" id="capsule">
+                <p class="main-title"><span>03</span> Space launch 101</p>
+                <div class="flexbox">
+                    <div class="links">
+                        <form action="#launch">
+                            <button class="button"><p>1</p></button>
+                        </form>
+                        <form action="#spaceport">
+                            <button class="button"><p>2</p></button>
+                        </form>
+                        <form action="#capsule">
+                            <button class="button"><p>3</p></button>
+                        </form>
+                    </div>
+                    <div class="text">
+                        <div class="head">
+                            <p class="sub-head">THE TERMINOLOGY . . .</p>
+                            <p class="main-head">Space capsule</p>
+                        </div>
+                        <p class="paragraph">A space capsule is an often-crewed spacecraft that uses 
+                            a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. 
+                            Our capsule is where you'll spend your time during the flight. It includes a space 
+                            gym, cinema, and plenty of other activities to keep you entertained.
+                        </p>
+                    </div>
+                    <picture>
+                        <source 
+                            srcset="./assets/technology/image-space-capsule-portrait.jpg"
+                            media="(min-width: 800px)">
+                        <img src="./assets/technology/image-space-capsule-landscape.jpg">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const close = document.querySelector('.close');
+        const ul = document.querySelector(".nav ul");
+    
+        hamburger.addEventListener('click', ()=> {
+            ul.style.right = "0";
+            close.style.display = "block";
+        });
+    
+        close.addEventListener('click', ()=> {
+            ul.style.right = "-70vw";
+            close.style.display = "none";
+        });
+
+        window.addEventListener('resize', function() {
+            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+            if (screenWidth > 550) {
+                if (window.innerWidth > 550) {
+                    close.click();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
